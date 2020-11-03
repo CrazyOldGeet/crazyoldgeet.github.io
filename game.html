@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>platformBasic</title>
+	<title>game</title>
 	<style type="text/css">
 html, body
 {
@@ -41,8 +41,6 @@ html, body
 	border-radius: 10px;
 	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.3);
 }
-#main a { color: #526ffc; }
-#main a:hover, #main a:active { color: #f2f2f2; background: #ea316e; }
 #footer
 {
 	background-color: #b1e3fa;
@@ -65,13 +63,12 @@ html, body
 </head>
 <body>
 <div id="wrapper">
-	<h1 id="title">platformBasic</h1>
+	<h1 id="title">game</h1>
 	<div id="main">
-		<center style="margin-bottom:10px">platformBasic</center>
-		<center><canvas id="canvas" width="1920" height="1080" style="max-width:100%;background:#000;vertical-align:middle"></canvas></center>
+		<center><canvas id="canvas" width="800" height="600" style="max-width:100%;background:#000;vertical-align:middle"></canvas></center>
 	</div>
 </div>
-<div id="footer">&copy; platformBasic &middot; Made using the <a href="https://love2d.org/" target="_blank">LÖVE Framework</a> (<a href="https://bitbucket.org/rude/love/raw/default/license.txt" target="_blank">License</a>) &middot; Packaged using <a href="https://schellingb.github.io/LoveWebBuilder/" target="_blank">LÖVE Web Builder</a></div>
+<div id="footer">Made using the <a href="https://love2d.org/" target="_blank">LÖVE Framework</a> (<a href="https://bitbucket.org/rude/love/raw/default/license.txt" target="_blank">License</a>) &middot; Packaged using <a href="https://schellingb.github.io/LoveWebBuilder/" target="_blank">LÖVE Web Builder</a></div>
 <script type="text/javascript">(function(){
 var TXT =
 {
@@ -113,7 +110,7 @@ var DoLoad = function()
 {
 	Msg(TXT.LOAD);
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'platformBasic.js');
+	xhr.open('GET', 'game.js');
 	xhr.onprogress = function(e)
 	{
 		if (!e.lengthComputable || ctx.pCnt++ < 5) return;
